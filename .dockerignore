@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.kimi-code
+.env
+.env.*
+!.env.example
+models
+outputs
+*.swp
+*.log

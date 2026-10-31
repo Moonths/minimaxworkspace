@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primitive palette */
+    --ink-950: oklch(10.5% 0.018 264);
+    --ink-900: oklch(15.5% 0.026 264);
+    --ink-850: oklch(20% 0.035 264);
+    --ink-700: oklch(23% 0.045 264);
+    --cyan-400: oklch(80% 0.14 220);
+    --mint-400: oklch(76% 0.14 155);
+    --amber-400: oklch(83% 0.16 85);
+    --red-400: oklch(70% 0.16 20);
+    --gray-100: oklch(89% 0.005 260);
+    --gray-400: oklch(70% 0.015 280);
+
+    /* Semantic palette */
+    --surface-page: var(--ink-950);
+    --surface-panel: var(--ink-900);
+    --surface-raised: var(--ink-850);
+    --surface-border: var(--ink-700);
+    --text-primary: var(--gray-100);
+    --text-secondary: var(--gray-400);
+    --action-primary: var(--cyan-400);
+    --status-positive: var(--mint-400);
+    --status-warning: var(--amber-400);
+    --status-critical: var(--red-400);
+
+    /* shadcn bridge */
+    --background: 228 39% 5%;
+    --foreground: 240 4% 89%;
+    --card: 227 37% 9%;
+    --card-foreground: 240 4% 89%;
+    --popover: 227 37% 9%;
+    --popover-foreground: 240 4% 89%;
+    --primary: 190 86% 63%;
+    --primary-foreground: 228 39% 7%;
+    --secondary: 225 33% 13%;
+    --secondary-foreground: 240 4% 89%;
+    --muted: 225 33% 13%;
+    --muted-foreground: 255 7% 68%;
+    --accent: 225 33% 15%;
+    --accent-foreground: 190 86% 70%;
+    --destructive: 5 72% 64%;
+    --destructive-foreground: 228 39% 7%;
+    --border: 225 32% 18%;
+    --input: 225 32% 22%;
+    --ring: 190 86% 63%;
+    --radius: 0.375rem;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    color-scheme: dark;
+    background: var(--surface-page);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    min-width: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+
+  button,
+  a,
+  summary {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--action-primary);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    color: var(--text-primary);
+    background: color-mix(in oklch, var(--action-primary) 35%, transparent);
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in oklch, var(--text-secondary) 30%, transparent);
+    border-radius: 8px;
+  }
+}

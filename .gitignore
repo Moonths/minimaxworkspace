@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.kimi-code/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Environment variables and private connection details
+.env
+.env.*
+!.env.example
+# Database
+*.db
+*.sqlite
+*.sqlite3
+db/migrations/*.sql
+# TypeScript cache
+*.tsbuildinfo
+# Build outputs
+dist/
+build/
+# Test coverage
+coverage/
+.nyc_output/
+# Local models and generated media
+models/
+outputs/
+*.safetensors
+*.ckpt
+*.gguf
+*.mp4
+*.webm
+*.mov
